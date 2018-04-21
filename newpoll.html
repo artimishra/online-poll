@@ -1,0 +1,200 @@
+
+
+<?php
+include "configpoll.php";
+if(isset($_POST['pollquestion']))
+{
+	$pollquestion=$_POST['pollquestion'];
+}
+if(isset($_POST['first']))
+{
+	$first=$_POST['first'];
+}
+if(isset($_POST['second']))
+{
+	$second=$_POST['second'];
+}
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <style type="text/css">
+        
+    </style>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" /><link href="css\loading.css" rel="stylesheet" type="text/css" /><link rel="SHORTCUT ICON" href="images/logo.ico" /><title>
+	New Poll
+</title><meta name="keywords" content="poll,polls,polls database,pollsdb,vote,opinion,survey,free,free poll,free polls,add poll,create poll,make poll,create polls,make polls,create a poll,make a poll,rate, free rating,star rating,poll for web page,rating for web page,database for html,dynamic html,guestbook,free guestbook,free blog,make guestbook,make blog,make web application,web application,free blog,free web application,free survey,web page tools,free tools," /><meta name="description" content="Polls Database, your vote counts." /><link href="gadget/gadget.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="gadget/jquery.min.js"></script>
+    <script type="text/javascript" src="gadget/plusone.js"></script>
+    <script type="text/javascript" src="gadget/4in1.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#facebook_right").hover(function () { jQuery(this).stop(true, false).animate({ right: 0 }, 500); }, function () { jQuery("#facebook_right").stop(true, false).animate({ right: -250 }, 500); }); jQuery("#twitter_right").hover(function () { jQuery(this).stop(true, false).animate({ right: 0 }, 500); }, function () { jQuery("#twitter_right").stop(true, false).animate({ right: -250 }, 500); }); jQuery("#google_plus_right").hover(function () { jQuery(this).stop(true, false).animate({ right: 0 }, 500); }, function () { jQuery("#google_plus_right").stop(true, false).animate({ right: -154 }, 500); }); jQuery("#feedburner_right").hover(function () { jQuery(this).stop(true, false).animate({ right: 0 }, 500); }, function () { jQuery("#feedburner_right").stop(true, false).animate({ right: -303 }, 500); });
+        });
+    </script>
+ <body style="border: 0; margin: 0; background-color: #F5F5F5;">
+          <form  action="configpoll.php" dir="" method="post">
+            <table cellpadding="0" cellspacing="0" width="100%" style="padding: 3px;">
+                <tr>
+                    <td style="width: 421px">
+                        <div id="ctl00_PHMain_NewEditPollX1_ListLayer" style="overflow: auto; height: 250px; width: 525px;">
+                           / <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="width: 5px;">
+                                                
+                                                
+                                                    <span id="ctl00_PHMain_NewEditPollX1_Label1" style="font-family:Arial;font-size:9pt;">Poll Question</span>
+                                                </td>
+                                                <td style="width: 5px;">
+                                                
+                                                
+                                                    <textarea name="pollquestion" rows="2" cols="20" id="pollquestion" style="font-family:Arial;font-size:9pt;height:50px;width:425px;">
+</textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+			<table cellspacing="0" cellpadding="4" rules="all" border="1" id="ctl00_PHMain_NewEditPollX1_grdOPT" style="background-color:White;border-color:#3366CC;border-width:1px;border-style:None;width:100%;border-collapse:collapse;">
+				<tr style="color:#CCCCFF;background-color:#003399;font-weight:bold;">
+					<th scope="col">
+                                                        <span id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl01_Label2" style="font-family:Arial;font-size:9pt;">Poll Options</span>
+                                                    </th>
+				</tr><tr style="color:#003399;background-color:#F7F7F7;">
+					<td>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl02_lblOptID" style="font-family:Arial;font-size:9pt;">01 </span>
+                                                                </td>
+                                                                <td>
+                                                                    <input name="first" type="text" id="first" style="width:390px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <!--<td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl02$imgbtnDelete" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl02_imgbtnDelete" title="Delete" class="imgbtn" src="App_Themes/Theme.en-US/images/delete.png" style="border-width:0px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl02$imgbtnAdd" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl02_imgbtnAdd" title="Add" class="imgbtn" src="App_Themes/Theme.en-US/images/add.png" style="border-width:0px;" />
+                                                                </td>-->
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr><tr style="color:#003399;background-color:#F7F7F7;">
+					<td>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_lblOptID" style="font-family:Arial;font-size:9pt;">02 </span>
+                                                                </td>
+                                                                <td>
+                                                                    <input name="second" type="text" id="second" style="width:390px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <!--<td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnDelete" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnDelete" title="Delete" class="imgbtn" src="App_Themes/Theme.en-US/images/delete.png" style="border-width:0px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnAdd" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnAdd" title="Add" class="imgbtn" src="App_Themes/Theme.en-US/images/add.png" style="border-width:0px;" />
+                                                                </td>-->
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+				<tr style="color:#003399;background-color:#F7F7F7;">
+					<td>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_lblOptID" style="font-family:Arial;font-size:9pt;">03 </span>
+                                                                </td>
+                                                                <td>
+                                                                    <input name="third" type="text" id="third" style="width:390px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <!--<td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnDelete" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnDelete" title="Delete" class="imgbtn" src="App_Themes/Theme.en-US/images/delete.png" style="border-width:0px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnAdd" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnAdd" title="Add" class="imgbtn" src="App_Themes/Theme.en-US/images/add.png" style="border-width:0px;" />
+                                                                </td>-->
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+				<tr style="color:#003399;background-color:#F7F7F7;">
+					<td>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_lblOptID" style="font-family:Arial;font-size:9pt;">04 </span>
+                                                                </td>
+                                                                <td>
+                                                                    <input name="fourth" type="text" id="fourth" style="width:390px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <!--<td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnDelete" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnDelete" title="Delete" class="imgbtn" src="App_Themes/Theme.en-US/images/delete.png" style="border-width:0px;" />
+                                                                </td>
+                                                                <td style="width: 5px;">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="image" name="ctl00$PHMain$NewEditPollX1$grdOPT$ctl03$imgbtnAdd" id="ctl00_PHMain_NewEditPollX1_grdOPT_ctl03_imgbtnAdd" title="Add" class="imgbtn" src="App_Themes/Theme.en-US/images/add.png" style="border-width:0px;" />
+                                                                </td>-->
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+				</tr>
+				
+			</table>
+		</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 421px">
+                        <hr />
+                    </td>
+                </tr>
+				<tr>
+                    <td style="width: 421px">
+                        <input type="submit" name="create" value="Create">
+                        <input type="submit" name="reset" value="Reset" />
+                        
+                    </td>
+                </tr>
+                
+            </table>
+			</form>
+        
+
+
+
+
+
+
+</body>
+</html>
